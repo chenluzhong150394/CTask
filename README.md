@@ -96,3 +96,10 @@ location /v1/cron/job {
 ## License
 
 Everything is [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
+
+
+
+## 启动项目 -- 5001 端口
+~~~shell
+/usr/local/bin/gunicorn -b 0.0.0.0:5001 manage:app --workers 4 --preload
+~~~

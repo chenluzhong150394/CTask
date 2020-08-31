@@ -6,9 +6,9 @@
 basedir="/var/www"
 
 # DB信息请修改正确
-mysql_host="10.211.55.4"
-mysql_user="root"
-mysql_pwd="123456"
+mysql_host="47.100.239.138"
+mysql_user="clz"
+mysql_pwd="oracle"
 
 function code_init() {
     echo "[Start] 克隆代码,并初始化配置"
@@ -33,13 +33,13 @@ function docker_init() {
     docker run --name ctask -d -p 5001:80 ctask:latest
 }
 
-code_init
-mysql_init
+#code_init
+#mysql_init
 docker_init
 
-cat >> /etc/hosts <<EOF
-127.0.0.1     cron.yangmv.com
-EOF
+#cat >> /etc/hosts <<EOF
+3127.0.0.1     cron.yangmv.com
+#EOF
 
 echo "[注意] 请在需要访问的机器上添加hosts"
 echo "you_host_ip     cron.yangmv.com"

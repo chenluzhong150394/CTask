@@ -6,11 +6,11 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 ###Mysql配置
 mysql_info = dict(
-    host = '127.0.0.1',
+    host = '47.100.239.138',
     port = 3306,
     dbname = 'ctask',
-    username = 'root',
-    password = '123456'
+    username = 'clz',
+    password = 'oracle'
 )
 
 MYSQL_URL = 'mysql+pymysql://%s:%s@%s:%s/%s?charset=utf8'%(mysql_info['username'],mysql_info['password'],
